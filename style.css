@@ -44,7 +44,6 @@ ul{
     justify-content: center;
 }
 
-
 .input-tarea {
     padding: 10px;
     font-size: 1rem;
@@ -103,7 +102,7 @@ ul{
   justify-content: space-between;   
   align-items: center;              
   background-color: #1b1b1b;         
-  color: #d4ffd4;                    
+  color: #ffffff;                    
   padding: 12px 16px;                
   margin-bottom: 10px;               
   border-radius: 8px;                
@@ -111,6 +110,18 @@ ul{
   font-size: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
   transition: transform 0.2s ease, background 0.3s ease;
+  flex-wrap: wrap;
+}
+
+#lista-tareas li span:first-child {
+    flex-grow: 1;       /* ocupa todo el espacio disponible */
+}
+
+#lista-tareas li span:nth-child(2) {
+    font-size: 0.85rem;
+    color: #ffffff91;     /* gris tenue para la fecha */
+    margin: 0 10px;     /* separación entre texto y botón */
+    white-space: nowrap; /* evita que la fecha se divida en varias líneas */
 }
 
 #lista-tareas li:hover {
@@ -127,42 +138,6 @@ ul{
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s ease;
-}
-
-.tarea {
-    background-color: #c21010;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards;
-}
-
-.tarea:hover {
-    background-color: #333;
-}
-
-.tarea input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.tarea button {
-    align-items: end;
-    background-color: #ff4d4d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.tarea button:hover {
-    background: darkred;
 }
 
 @keyframes fadeInUp {
