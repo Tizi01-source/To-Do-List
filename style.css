@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #111; 
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    color: #39ff14; 
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+label{
+    font-size: 1.9rem;
+}
+
+.input-tarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.input-tarea:focus {
+    box-shadow: 0 0 10px #28d60a;
+}
+
+.btn-agregar {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #39ff14;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #2fac0f;
+}
+
+.btn-borrar {
+    margin-left: 10px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-borrar:hover {
+    background: darkred;
+}
+
+
+#lista-tareas {
+    list-style: none;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #2fac0f;
+    border-radius: 10px;
+}
+
+main ul li {
+    display: flex;
+    padding: 10px;
+    width: 300px;
+    justify-content: space-between; 
+}
+
+.btn-borrar {
+  margin-left: auto;
+}
+
+.tarea {
+    background-color: #c21010;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.tarea:hover {
+    background-color: #333;
+}
+
+.tarea input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.tarea button {
+    align-items: end;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tarea button:hover {
+    background: darkred;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
