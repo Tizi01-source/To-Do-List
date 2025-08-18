@@ -38,6 +38,13 @@ label{
     font-size: 1.9rem;
 }
 
+ul{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
 .input-tarea {
     padding: 10px;
     font-size: 1rem;
@@ -82,25 +89,44 @@ label{
     background: darkred;
 }
 
-
 #lista-tareas {
-    list-style: none;
-    margin-top: 40px;
-    width: 100%;
-    max-width: 600px;
-    background-color: #2fac0f;
-    border-radius: 10px;
+  list-style: none;    
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 15px; 
 }
 
-main ul li {
-    display: flex;
-    padding: 10px;
-    width: 300px;
-    justify-content: space-between; 
+#lista-tareas li {
+  display: flex;                   
+  justify-content: space-between;   
+  align-items: center;              
+  background-color: #1b1b1b;         
+  color: #d4ffd4;                    
+  padding: 12px 16px;                
+  margin-bottom: 10px;               
+  border-radius: 8px;                
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#lista-tareas li:hover {
+  transform: scale(1.02);
+  background-color: #222;           
 }
 
 .btn-borrar {
-  margin-left: auto;
+  background: #3aaa35;              
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .tarea {

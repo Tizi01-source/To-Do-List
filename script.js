@@ -1,6 +1,9 @@
 const form = document.getElementById('formulario')
 const tarea = document.getElementById('tarea')
 const lista = document.getElementById("lista-tareas");
+const fondo = document.getElementsByTagName("ul");
+
+
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -10,6 +13,8 @@ form.addEventListener("submit", function (event) {
     if (textoTarea !== ""){
         const li = document.createElement("li");
         li.textContent = textoTarea;
+
+        
 
         const btnBorrar = document.createElement("button");
         btnBorrar.textContent = "Borrar"
@@ -23,5 +28,6 @@ form.addEventListener("submit", function (event) {
         lista.appendChild(li);
 
         tarea.value = "";
+        
     }
 });
